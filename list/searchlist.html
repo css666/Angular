@@ -1,0 +1,12 @@
+<div class="container-fluid">
+	<div class="row">
+
+		<div ng-repeat="song in songList" class="song col-xs-6 col-sm-3 col-md-3 col-lg-2">
+			<a  class="imgbox thumbnail" href="#/detail/{{song.song_id}}">
+				<img style="width: 50%;height: 50%;" ng-src={{song.artistpic}} alt="...">
+			</a>
+			<p>{{song.artistname}}:{{song.albumname}}</p>
+		</div>
+		
+        
+	</div>

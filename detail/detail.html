@@ -1,0 +1,15 @@
+<div class="detail">
+	<div class="detailImgBox">
+		<img ng-src={{detailImg}} class="img-responsive">
+		<br />
+		<button id="play" type="button" class="btn btn-danger">播放</button>
+		<a id="download" href=""  class="btn btn-success">下载</a>
+		
+		
+	</div>
+	<div class="detaillriBox">
+		<h1>{{title}}</h1>
+		<p ng-repeat="lry in lryss track by $index">{{lry}}</p>
+	</div>
+
+</div>

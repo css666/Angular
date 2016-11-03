@@ -1,0 +1,291 @@
+/*顶部导航*/
+
+.topnav{
+	width: 100%;
+	height: 7%;
+}
+
+
+/*左侧导航*/
+.aside-left{
+	width: 10%;
+	height: 80%;
+	position: fixed;
+	top: 7%;
+	left: 0px;
+	background: #3C3F41;
+	bottom: 15%;
+	z-index: 1000;
+	
+}
+.aside-left ul{
+	width: 150%;
+	height: 100%;
+	
+}
+.nav a li{
+	border-radius: 10px;
+}
+.aside-left ul li{
+	width: 100%;
+	height: 10%;
+	
+	color: white;
+	text-align: center;
+	
+	position: relative;
+	left: -50%;
+	background: #3C3F41;
+	-webkit-transition: left 0.5s; 
+	
+}
+.aside-left ul li div{
+	float: left;
+	width: 50%;
+	height: 100%;
+	font-size: 14px;
+	line-height:400%;
+}
+.aside-left ul li:hover{
+	left: 30%;
+}
+/*底部导航*/
+.footer{
+	width: 100%;
+	height: 15%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	background: #808080;
+	z-index: 10001;
+}
+.footer .container-fluid{
+	
+	height: 100%;
+}
+.footer .container-fluid .row{
+	width: 100%;
+	height: 100%;
+}
+
+/*底部播放面板 歌曲图片*/
+.footer .container-fluid .row .footer-banner{
+	height: 100%;
+	position: relative;
+
+}
+/*歌曲图片*/
+@keyframes rotateMusic{
+	from{
+		-webkit-transform:rotate(0deg) ;
+		}
+	to{
+		-webkit-transform:rotate(360deg) ;
+	}
+}
+.footer .container-fluid .row .footer-banner img{
+	display: block;
+	width: 70px;
+	height: 70px;
+	margin: 4%;
+	border-radius:35px;
+	float: left;
+	
+	
+	-webkit-animation:rotateMusic 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	
+}
+/* 控制面板*/
+/*.footer .container-fluid .row .footer-banner .constrols-panner{
+	float: left;
+	width: 60%;
+	height: 70%;
+	margin: 5%;
+	
+}
+
+.control{
+	margin: 8%;
+	float: left;
+	
+}*/
+#music{
+	width: 60%;
+	height: 60%;
+	margin: 2%;
+	
+}
+
+/*进度条*/
+.footer .container-fluid .row .footer-progress{
+	position: relative;
+	height: 100%;
+	
+}
+.footer-progress-bar{
+	width: 60%;
+	height: 10px;
+	position:absolute;
+	top:50%;
+	left: 10%;
+	
+	background: -webkit-linear-gradient(gray,white,gray);
+	border-radius: 5px;
+	border:1px solid black;
+}
+
+
+/*中间展示区*/
+.main{
+	width: 90%;
+	height: 80%;
+	position: absolute;
+	top: 7%;
+	left: 10%;
+	overflow: auto;
+	/*background: red;*/
+}
+.song p{
+	
+	height: 20px;
+	overflow: hidden;
+	text-align: center;
+	
+}
+
+
+/*轮播广告*/
+.carousel{
+    height: 100%;
+    overflow: hidden;
+   
+		
+}
+.carousel, .carousel-inner, .item{
+	width: 100%;
+	height: 100%;
+}
+.carousel .carousel-inner .item img{
+	background-size: contain ;
+}
+/*翻页*/
+.page {
+	text-align: center;
+}
+
+/*加载遮罩层*/
+.spinner {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 10px;
+  background-color: #E6E6E6;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 10%;
+  width: 6px;
+  margin-top: 10%;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+
+
+
+/*详细页*/
+.detail{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: -webkit-radial-gradient(circle,gray,white,gray,white);
+
+}
+.detail .detailImgBox{
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+.detail .detailImgBox img{
+	width: 80%;
+	height: 60%;
+	margin: 10%;
+	border-radius:  50%;
+}
+.detail .detailImgBox button{
+	margin-left: 26%;
+	
+}
+.detail .detaillriBox{
+	width: 50%;
+	height: 80%;
+	float: left;
+	padding: 10%;
+	text-align: center;
+	overflow-y: scroll;
+	
+	
+	
+}
+/*搜索框*/
+.topsearch{
+	background: red;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+/*动态输入框*/
+.navsearch{
+	height: auto;
+	width: auto;
+	position: relative;
+	float: right;
+}
+#serchbox{
+	width: 100%;
+	margin-top: 1%;
+	float: right;
+	margin-right: -20%;
+	
+}

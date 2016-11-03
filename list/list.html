@@ -1,0 +1,26 @@
+<div ng-hide="totalPage" class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+
+<h1>{{title}}<small>共{{totalPage}}页</small></h1>
+<div class="container-fluid">
+	<div class="row">
+
+		<div ng-repeat="song in songList" class="song col-xs-6 col-sm-3 col-md-3 col-lg-2">
+			<a  class="imgbox thumbnail" href="#/detail/{{song.song_id}}">
+				<img ng-src={{song.pic_small}} alt="...">
+			</a>
+			<p>{{song.author}}:{{song.album_title}}</p>
+		</div>
+		
+        
+	</div>
+    <nav class="page">
+        <!--翻页-->
+        <page pageconfig='pageConfig'></page>
+    </nav>
+</div>

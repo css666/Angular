@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nuomiApp">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="css">
+
+		<title>Nuomi Music</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/app.css" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<!--头部导航-->
+		<nav class="topnav navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<!--适应手机-->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+					<a class="navbar-brand" href="#">糯米音乐</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+
+						<li>
+							<a href="#/login">登录</a>
+						</li>
+						<li>
+							<a href="#/register">注册</a>
+						</li>
+						<li>
+							<a href="#/help">帮助</a>
+						</li>
+					</ul>
+					<!--输入框指令-->
+					<search ></search>
+					
+				</div>
+			</div>
+		</nav>
+		<!--左侧导航-->
+		<div class="aside-left">
+			<ul class="nav nav-sidebar">
+				<a href="#/hot">
+					<li>
+						<div>热歌</div>
+						<div><i class="glyphicon glyphicon-fire"></i></div>
+					</li>
+				</a>
+				<a href="#/new">
+					<li>
+						<div>新歌</div>
+						<div><i class="glyphicon glyphicon-send"></i></div>
+					</li>
+				</a>
+				<a href="#/rock">
+					<li>
+						<div>摇滚</div>
+						<div><i class="glyphicon glyphicon-flash"></i></div>
+					</li>
+				</a>
+				
+				<a href="#/oe">
+					<li>
+						<div>欧美</div>
+						<div><i class="glyphicon glyphicon-globe"></i></div>
+					</li>
+				</a>
+				<a href="#/old">
+					<li>
+						<div>老歌</div>
+						<div><i class="glyphicon glyphicon-glass"></i></div>
+					</li>
+				</a>
+				<a href="#/movie">
+					<li>
+						<div>影视</div>
+						<div><i class="glyphicon glyphicon-queen"></i></div>
+					</li>
+				</a>
+				<a href="#/love">
+					<li>
+						<div>情歌</div>
+						<div><i class="glyphicon glyphicon-heart"></i></div>
+					</li>
+				</a>
+				<a href="#/wang">
+					<li>
+						<div>网歌</div>
+						<div><i class="glyphicon glyphicon-sunglasses"></i></div>
+					</li>
+				</a>
+				
+
+			</ul>
+		</div>
+		<!--中间详情-->
+		<div class="main">
+			
+			<ng-view></ng-view>
+		</div>
+
+		<!--底部播放控制器-->
+		<div class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4 col-md-7 col-sm-12 col-xs-12  footer-banner">
+						<div class="footer-img">
+							<img class="footer-music-image" id="ximg" src="img/1.jpg"></img>
+						</div>
+						
+                         <audio id="music" class="audio" controls="controls">
+  
+                            <source id="song" src="./song/夜空中最亮的星.mp3" type="audio/mpeg">
+                             browser does not support the audio tag.
+                          </audio>						
+					</div>
+					<div class="col-lg-8 col-md-5 col-sm-12 col-xs-12  footer-progress">
+						<div class="footer-progress-bar">
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src='js/angular.js'></script>
+		<script type="text/javascript" src='js/angular-route.js'></script>
+		
+		<script type="text/javascript" src="./js/server.js"></script>
+		<script type="text/javascript" src="./ad/ad.js"></script>
+        <script type="text/javascript" src="./list/list.js"></script>
+		<script type="text/javascript" src="./detail/detail.js"></script>
+		<script type="text/javascript" src="./js/search.js"></script>
+		
+        <script type="text/javascript" src="js/app.js"></script>
+		
+
+	</body>
+
+</html>
